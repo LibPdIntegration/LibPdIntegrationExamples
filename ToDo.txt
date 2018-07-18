@@ -1,0 +1,10 @@
+LibPd Integration Examples
+--------------------------
+- Generate documentation from LibPdInstance.cs.
+
+Further down the line:
+----------------------
+- LibPd -> Unity Example.
+- MIDI Example.
+- Array Example.
+- List/Message Example.

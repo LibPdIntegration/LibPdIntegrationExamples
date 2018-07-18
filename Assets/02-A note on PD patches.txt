@@ -1,0 +1,2 @@
+The included PD patches were designed to be viewed zoomed in (Ctrl +). Their
+layouts may be a bit messy when viewed at the default zoom level in PD.
