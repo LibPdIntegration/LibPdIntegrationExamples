@@ -2,7 +2,7 @@
 
 ![Unity example project, spatialisation scene](docs/images/screenshot-spatialisation.jpg)
 
-Unity project demonstrating how to use the [LibPdIntegration](../LibPdIntegration/) libpd Unity wrapper. Contains multiple scenes, each focused on a specific topic. Still in development.
+Unity project demonstrating how to use the [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) libpd Unity wrapper. Contains multiple scenes, each focused on a specific topic. Still in development.
 
 ## Completed Demonstration Scenes
 
