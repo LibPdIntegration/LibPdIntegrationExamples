@@ -1,6 +1,6 @@
 LibPd Integration Examples
 --------------------------
-- Generate documentation from LibPdInstance.cs.
+- Add OculusSpatializer example.
 
 Further down the line:
 ----------------------
