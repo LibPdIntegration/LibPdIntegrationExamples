@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchName: FloatExample
-  patchDir: /StreamingAssets/PdAssets/Unity2LibPdPatches/
+  patchDir: /PdAssets/Unity2LibPdPatches/
   patch: {fileID: 102900000, guid: 7341d6c8b5ae80f4b9c3e55c68de573e, type: 3}
   pipePrintToConsole: 0
   pureDataEvents:
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchName: BangExample
-  patchDir: /StreamingAssets/PdAssets/Unity2LibPdPatches/
+  patchDir: /PdAssets/Unity2LibPdPatches/
   patch: {fileID: 102900000, guid: 131d5aebbccdcfb4cb9e49d9daf8227c, type: 3}
   pipePrintToConsole: 0
   pureDataEvents:

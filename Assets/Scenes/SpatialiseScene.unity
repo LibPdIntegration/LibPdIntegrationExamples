@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchName: SineDrone
-  patchDir: /StreamingAssets/PdAssets/SpatialisationPatches/
+  patchDir: /PdAssets/SpatialisationPatches/
   patch: {fileID: 102900000, guid: 55f52df84da09804c81d203410a4fdde, type: 3}
   pipePrintToConsole: 1
   pureDataEvents:
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchName: FilteredNoise-ADC
-  patchDir: /StreamingAssets/PdAssets/SpatialisationPatches/
+  patchDir: /PdAssets/SpatialisationPatches/
   patch: {fileID: 102900000, guid: 8d059ad70b1caa34abcb319fba07da55, type: 3}
   pipePrintToConsole: 1
   pureDataEvents:
@@ -1326,7 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchName: FilteredNoise
-  patchDir: /StreamingAssets/PdAssets/SpatialisationPatches/
+  patchDir: /PdAssets/SpatialisationPatches/
   patch: {fileID: 102900000, guid: 0f0b3965e1ca19a479d4cc4e00cd2810, type: 3}
   pipePrintToConsole: 1
   pureDataEvents:
