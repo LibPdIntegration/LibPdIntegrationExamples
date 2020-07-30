@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPdIntegrationExamples", "Assembly-CSharp.csproj", "{F0B4C44C-426F-A1BA-F9AE-AD0AF41B3477}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{F0B4C44C-426F-A1BA-F9AE-AD0AF41B3477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
