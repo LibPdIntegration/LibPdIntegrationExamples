@@ -114,12 +114,17 @@ public class LibPdInstance : MonoBehaviour
 {
 
 	#region libpd imports
-	
-	#if UNITY_IOS
+
+#if UNITY_IOS
 	private const string DLL_NAME="__Internal";
-	#else
+//The following lines will be needed if we can get externals working on Windows.
+//Just renaming libpd.dll to pd.dll does not seem to be enough though, so
+//they're commented out for now.
+//#elif UNITY_STANDALONE_WIN
+//	private const string DLL_NAME="pd";
+#else
 	private const string DLL_NAME="libpd";
-	#endif
+#endif
 	
 	
 	//--------------------------------------------------------------------------
@@ -661,14 +666,6 @@ public class LibPdInstance : MonoBehaviour
 			libpd_add_float(0.0f);
 			libpd_finish_message("pd", "dsp");
 
-			//TODO: Is this correct? What happens if one LibPdInstance is
-			//destroyed while another stays alive?
-			if(printHook != null)
-			{
-				printHook = null;
-				libpd_set_queued_printhook(printHook);
-			}
-
 			foreach(var ptr in bindings.Values)
 				libpd_unbind(ptr);
 			bindings.Clear();
@@ -681,6 +678,12 @@ public class LibPdInstance : MonoBehaviour
 		//If we're the last instance left, release libpd's ringbuffer.
 		if(pdInitialised && (activeInstances.Count < 1))
 		{
+			if(printHook != null)
+			{
+				printHook = null;
+				libpd_set_queued_printhook(printHook);
+			}
+
 			libpd_queued_release();
 
 			pdInitialised = true;

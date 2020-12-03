@@ -1,9 +1,5 @@
 LibPd Integration Examples
 --------------------------
-- Add OculusSpatializer example.
-
-Further down the line:
-----------------------
 - LibPd -> Unity Example.
 - MIDI Example.
 - Array Example.
