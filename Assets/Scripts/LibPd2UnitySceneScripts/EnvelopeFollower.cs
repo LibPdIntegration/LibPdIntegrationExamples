@@ -41,10 +41,11 @@ public class EnvelopeFollower : MonoBehaviour
     }
 
 	///	Clean up after ourselves and unbind from the AmplitudeEnvelope object.
+	///	(not strictly necessary in this code, but a good habit to get into)
 	void OnDestroy()
 	{
 		//Unbind from the named send object.
-		pdPatch.UnBind("AmplitudeEnvelope");
+		//pdPatch.UnBind("AmplitudeEnvelope");
 	}
 
 	///	Our receive function. This will be called whenever a bound send object

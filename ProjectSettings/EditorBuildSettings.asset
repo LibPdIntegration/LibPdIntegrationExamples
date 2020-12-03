@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Unity2LibPdScene.unity
     guid: 28a2beedd0da5754e955eef66b91d68d
+  - enabled: 1
+    path: Assets/Scenes/LibPd2UnityScene.unity
+    guid: 9dd7eec3796ab5e4d89b1505ce5a9b8f
   m_configObjects: {}

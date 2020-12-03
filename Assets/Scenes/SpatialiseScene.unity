@@ -1993,7 +1993,7 @@ TextMesh:
   m_Text: "This scene demonstrates how to\r\nspatialise PD patches in Unity.\r\n\nThe
     <color=#ff2020a8><b>Red</b></color> <i>(FilteredSound-ADC.pd)</i>\nsphere <b>is</b>
     spatialised, while the\n<color=#385893a8><b>Blue</b></color> sphere <i>(SineDrone.pd)</i>
-    <b>is not</b>.\n\nNote that there is an additional\n(hidden) <color=#389356a8><b>Green</b></color>
+    <b>is not</b>.\n\nNote that there is an additional\n(disabled) <color=#389356a8><b>Green</b></color>
     Sphere in the\nHeirarchy; this demonstrates how\nto use a spatialisation framework\nlike
     Steam Audio as an alternative\napproach. See the wiki for details.\n\nLook at
     the AudioSources for the\nspheres to see how this is done:"
