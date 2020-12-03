@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\LibPd2UnitySceneScripts\EnvelopeFollower.cs" />
     <Compile Include="Assets\Scripts\LibPdInstance.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpatialisationSceneScripts\CircleMotion.cs" />
@@ -75,6 +76,12 @@
     <None Include="Assets\02-A note on PD patches.txt" />
     <None Include="Assets\01-Readme First.txt" />
     <None Include="Assets\04-Readme Unity2LibPdScene.txt" />
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -89,12 +96,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.29f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
