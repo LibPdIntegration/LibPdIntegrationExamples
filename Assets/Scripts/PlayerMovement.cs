@@ -27,7 +27,8 @@ using UnityEngine;
 
 /// Simple first person movement script, included so we don't need to include
 /// any Standard Assets (they're far heavier than we need).
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
 	/// Used to implement mouselook on the vertical axis.
 	public Camera playerCamera;
 
@@ -40,12 +41,14 @@ public class PlayerMovement : MonoBehaviour {
 	private float jumpAmount;
 
 	/// We use this to hide the mouse cursor.
-	void Start () {
+	void Start()
+	{
 		Cursor.visible = false;
 	}
 	
 	/// This is where we move the Player object and Camera.
-	void Update () {
+	void Update()
+	{
 		//Get our current WASD speed.
 		Vector3 strafe = new Vector3(Input.GetAxis("Horizontal") * 10.0f, 0.0f, 0.0f);
 		float forwardSpeed = Input.GetAxis("Vertical") * 10.0f;
@@ -74,9 +77,11 @@ public class PlayerMovement : MonoBehaviour {
 		//jumping AND on the ground, OR they are jumping but they've not reached
 		//the top of the jump, increase their jumpAmount and move them
 		//accordingly on the y-axis.
-		if(Input.GetButton("Jump")) {
+		if(Input.GetButton("Jump"))
+		{
 			if(((jumpAmount <= 0.0f) && controller.isGrounded) ||
-			   ((jumpAmount > 0.0f) && (jumpAmount < 1.0f))) {
+			   ((jumpAmount > 0.0f) && (jumpAmount < 1.0f)))
+			{
 				jumpAmount += Time.deltaTime * 5.0f;
 
 				jumpVector.y = 4.0f + ((1.0f - jumpAmount) * 20.0f);
@@ -84,7 +89,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		//Otherwise, if they're on the ground but their jumpAmount is not 0,
 		//reset it.
-		else if((jumpAmount > 0.0f) && controller.isGrounded) {
+		else if((jumpAmount > 0.0f) && controller.isGrounded)
+		{
 			jumpAmount = 0.0f;
 		}
 

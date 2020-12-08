@@ -28,7 +28,8 @@ using UnityEngine;
 
 /// Script to send a float to a PD patch determined by the player's proximity to
 /// a specific GameObject.
-public class Proximity2Float : MonoBehaviour {
+public class Proximity2Float : MonoBehaviour
+{
 
 	// The Pd patch we'll be communicating with.
 	public LibPdInstance pdPatch;
@@ -37,7 +38,8 @@ public class Proximity2Float : MonoBehaviour {
 	
 	/// All our calculations for this class take place in MonoBehaviour's
 	/// Update() function.
-	void Update () {
+	void Update()
+	{
 		//Get the distance between the sphere and the main camera.
 		float proximity = Vector3.Distance(sphereTransform.position, Camera.main.transform.position);
 

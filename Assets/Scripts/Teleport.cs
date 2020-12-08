@@ -27,13 +27,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// Simple script used to teleport the player between scenes.
-public class Teleport : MonoBehaviour {
+public class Teleport : MonoBehaviour
+{
 
 	/// The name of the scene to load when the player walks into the associated portal.
 	public string sceneToLoad;
 
 	/// This gets called when the player walks into the associated portal.
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter(Collider other)
+	{
 		//This loads our new scene.
 		SceneManager.LoadSceneAsync(sceneToLoad);
 	}

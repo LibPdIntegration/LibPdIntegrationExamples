@@ -26,7 +26,8 @@ using UnityEngine;
 
 /// Script to send a random MIDI note to a PD patch when the player enters and
 /// leaves a collision volume.
-public class Button2Midi : MonoBehaviour {
+public class Button2Midi : MonoBehaviour
+{
 
 	/// The PD patch we're going to communicate with.
 	public LibPdInstance pdPatch;
@@ -35,17 +36,29 @@ public class Button2Midi : MonoBehaviour {
 	///	note off message when the player exits the collision volume.
 	private int note;
 
-	/// We send a bang when the player steps on the button (enters the collision
-	/// volume).
-	void OnTriggerEnter(Collider other) {
+	/// We send a MIDI note when the player steps on the button (enters the
+	/// collision volume).
+	void OnTriggerEnter(Collider other)
+	{
+		//First, pick a random note. This should pick from an octave starting at
+		//middle C.
 		note = 60 + Mathf.FloorToInt(Random.value * 12.0f);
 
+		//Now send our MIDI note on message to our PD patch.
+		//SendMidiNoteOn's 3 arguments are: channel, note number, velocity
 		pdPatch.SendMidiNoteOn(0, note, 127);
 	}
 
-	/// We send a different bang when the player steps off the button (leaves
+	/// We send a note off message when the player steps off the button (leaves
 	/// the collision volume).
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit(Collider other)
+	{
+		//Send a note off message to our patch when the player leaves the
+		//button's collision volume.
+
+		//Note that there is no dedicated 'SendMidiNoteOff' function. To send a
+		//note off message we have to send a 'note on' message with a velocity
+		//of 0.
 		pdPatch.SendMidiNoteOn(0, note, 0);
 	}
 }

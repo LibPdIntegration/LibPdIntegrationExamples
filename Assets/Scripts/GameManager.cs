@@ -26,23 +26,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// Script used to let the player quit by pressing Escape (in a build).
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
 	/// Used to ensure we don't create another instance of GameManager if we
 	/// return to the MainScene.
 	private static bool instantiated = false;
 
 	/// We use this to ensure our GameManager doesn't get destroyed when we switch scenes.
-	void Awake () {
-		if(!instantiated) {
+	void Awake ()
+	{
+		if(!instantiated)
+		{
 			DontDestroyOnLoad(this.gameObject);
 			instantiated = true;
 		}
 	}
 
 	/// Listen for the user pressing Escape to quit.
-	void Update() {
-		if(Input.GetButton("Quit")) {
+	void Update()
+	{
+		if(Input.GetButton("Quit"))
+		{
 			 Application.Quit();
 		}
 	}

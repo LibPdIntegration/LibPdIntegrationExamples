@@ -26,7 +26,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// Script used to move an object in a circle.
-public class CircleMotion : MonoBehaviour {
+public class CircleMotion : MonoBehaviour
+{
 
 	/// The Transform of the GameObject we're going to move in a circle.
 	public Transform objectToMove;
@@ -40,7 +41,8 @@ public class CircleMotion : MonoBehaviour {
 	private Vector3 centrePos;
 
 	/// Used to setup centrePos.
-	void Start () {
+	void Start()
+	{
 		//These lines calculate the centre of the circle we're going to move the
 		//object in. We assume the developer has placed the object at the
 		//12 o'clock position of the circle, so the centre position is its
@@ -50,7 +52,8 @@ public class CircleMotion : MonoBehaviour {
 	}
 	
 	/// Move the object along its path.
-	void Update () {
+	void Update()
+	{
 		Vector3 pos = centrePos;
 
 		//Update circleIndex to move the object further around the circle.

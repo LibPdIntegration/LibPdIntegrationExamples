@@ -28,14 +28,16 @@ using UnityEngine;
 
 /// Script to send a bang to a PD patch when the player enters and leaves a
 /// collision volume.
-public class Button2Bang : MonoBehaviour {
+public class Button2Bang : MonoBehaviour
+{
 
 	/// The PD patch we're going to communicate with.
 	public LibPdInstance pdPatch;
 
 	/// We send a bang when the player steps on the button (enters the collision
 	/// volume).
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter(Collider other)
+	{
 		//To send a bang to our PD patch, the patch needs a named receive object
 		//(in this case, named VolumeUp), and then we can just use the
 		//SendBang() function to send a bang to that object from Unity.
@@ -46,7 +48,8 @@ public class Button2Bang : MonoBehaviour {
 
 	/// We send a different bang when the player steps off the button (leaves
 	/// the collision volume).
-	void OnTriggerExit(Collider other) {
+	void OnTriggerExit(Collider other)
+	{
 		pdPatch.SendBang("VolumeDown");
 	}
 }
