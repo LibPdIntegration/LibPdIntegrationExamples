@@ -4,29 +4,12 @@ This scene demonstrates a couple of methods for spatialising Pure Data patches
 in Unity. 
 
 
-OculusSpatializer Plugin Method
--------------------------------
-
-This is the simplest method of spatialising patches in Unity. It requires the
-following steps:
-
-For the project:
-1.) Edit -> Project Settings... -> Audio.
-2.) Set Spatializer Plugin to OculusSpatializer.
-
-For each Audio Source in the scene:
-1.) Toggle 'Spatialize' and 'Spatialize Post Effect' on.
-
-In testing it, the OculusSpatializer plugin seems to attenuate the sound quite
-aggressively, so an alternative approach is also included.
-
-
-Alternative Method
-------------------
+Working with Unity's default spatialisation
+-------------------------------------------
 
 This method makes use of Unity's default audio spatialisation framework. It is a
-bit more involved than the OculusSpatializer approach, but doesn't attenuate the
-sound as aggressively.
+bit more involved than the alternative approach, but doesn't an external
+spatial audio framework.
 
 The first thing to note is that, by default, Unity only spatialises
 AudioSources. It won't apply spatialisation to any other audio producing
@@ -45,3 +28,24 @@ the steps you'll need to take to spatialise your PD patch are:
 This process will ensure that the spatialisation applied to the AudioSource gets
 applied to the output of your patch. See FilteredNoise-ADC.pd for more
 information.
+
+
+Working with spatializer plugins
+--------------------------------
+
+Alternatively you can work with a custom spatialisation framework, using a
+Spatializer Plugin. Spatializer Plugins make implementation a bit simpler, but
+they do require you to import a spatialisation framework into your project. The
+following example uses Steam Audio, but the steps are identical regardless of
+which framework you use.
+
+It should be noted that Spatializer Plugins are almost always intended for VR
+(i.e. headphone) use. So this approach may not make sense if you're building a
+project intended for speaker output.
+
+For the project:
+1.) Edit -> Project Settings... -> Audio.
+2.) Set Spatializer Plugin to Steam Audio Spatializer.
+
+For each Audio Source in the scene:
+1.) Toggle 'Spatialize' and 'Spatialize Post Effect' on.
