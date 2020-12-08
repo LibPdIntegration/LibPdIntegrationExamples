@@ -76,6 +76,7 @@
     <None Include="Assets\02-A note on PD patches.txt" />
     <None Include="Assets\01-Readme First.txt" />
     <None Include="Assets\04-Readme Unity2LibPdScene.txt" />
+    <None Include="Assets\05-Readme LibPd2UnityScene.txt" />
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/Niall Moody/Programming/Unity/LibPdIntegrationExamples/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>

@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14496bc842cc2dd40b3da723e07b976d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchName: FloatExample
+  patchName: SineEnvelope
   patchDir: /PdAssets/LibPd2UnityPatches/
   patch: {fileID: 102900000, guid: 9ab0089af2eeb0c419b1315779d38b33, type: 3}
   pipePrintToConsole: 1
