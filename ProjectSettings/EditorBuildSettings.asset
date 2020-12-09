@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LibPd2UnityScene.unity
     guid: 9dd7eec3796ab5e4d89b1505ce5a9b8f
+  - enabled: 1
+    path: Assets/Scenes/MidiScene.unity
+    guid: 34d87ee75336d8740ac7d748f153e629
   m_configObjects: {}
