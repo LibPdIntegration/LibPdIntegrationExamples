@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\LibPd2UnitySceneScripts\EnvelopeFollower.cs" />
     <Compile Include="Assets\Scripts\LibPdInstance.cs" />
     <Compile Include="Assets\Scripts\MidiSceneScripts\Button2Midi.cs" />
+    <Compile Include="Assets\Scripts\MidiSceneScripts\Midi2Unity.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpatialisationSceneScripts\CircleMotion.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
