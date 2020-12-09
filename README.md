@@ -8,12 +8,10 @@ Unity project demonstrating how to use the [LibPdIntegration](https://github.com
 
 - Spatialisation
 - Communication from Unity to libpd
+- Communication from libpd to Unity
+- libpd MIDI handling
 
 ## Still to Come
-
-- Communication from libpd to Unity
-
-- libpd MIDI handling
 
 - Arrays
 
