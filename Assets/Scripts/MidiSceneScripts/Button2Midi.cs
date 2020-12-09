@@ -28,7 +28,6 @@ using UnityEngine;
 /// leaves a collision volume.
 public class Button2Midi : MonoBehaviour
 {
-
 	/// The PD patch we're going to communicate with.
 	public LibPdInstance pdPatch;
 
