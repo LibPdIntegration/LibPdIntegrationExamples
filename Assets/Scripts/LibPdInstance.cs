@@ -576,7 +576,7 @@ public class LibPdInstance : MonoBehaviour
 		int bufferSize;
 		int noOfBuffers;
 
-		AudioSettings.GetDSPBufferSize (out bufferSize, out noOfBuffers);
+		AudioSettings.GetDSPBufferSize(out bufferSize, out noOfBuffers);
 		numTicks = bufferSize/libpd_blocksize();
 
 		//Create our instance.
@@ -586,7 +586,42 @@ public class LibPdInstance : MonoBehaviour
 		libpd_set_instance(instance);
 
 		//Initialise audio.
-		int err = libpd_init_audio(2, 2, AudioSettings.outputSampleRate);
+		int numSpeakers = 2;
+
+		if(AudioSettings.driverCapabilities != AudioSettings.speakerMode)
+			Debug.LogWarning("LibPdInstance Warning: Soundcard driver capabilities do match the selected speaker mode. Using speaker mode: " + AudioSettings.driverCapabilities);
+
+		switch(AudioSettings.driverCapabilities)
+		{
+			case AudioSpeakerMode.Mono:
+				numSpeakers = 1;
+				break;
+			case AudioSpeakerMode.Stereo:
+				numSpeakers = 2;
+				break;
+			case AudioSpeakerMode.Quad:
+				numSpeakers = 4;
+				break;
+			case AudioSpeakerMode.Surround:
+				numSpeakers = 5;
+				break;
+			case AudioSpeakerMode.Mode5point1:
+				numSpeakers = 6;
+				break;
+			case AudioSpeakerMode.Mode7point1:
+				numSpeakers = 8;
+				break;
+			case AudioSpeakerMode.Prologic:
+				//TODO: If I understand the Unity docs correctly, it will be
+				//impossible for us to spatialise patches if speakerMode is set
+				//to Prologic. So this option may not be particularly useful.
+				numSpeakers = 2;
+				break;
+		}
+
+		int err = libpd_init_audio(numSpeakers,
+								   numSpeakers,
+								   AudioSettings.outputSampleRate);
 		if(err != 0)
 		{
 			pdFail = true;
